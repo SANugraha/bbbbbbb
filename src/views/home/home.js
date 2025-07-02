@@ -1,11 +1,12 @@
 import React from "react";
-import Banner from '../../components/Banner';
-import ChoosingUs from "../../components/ChoosingUs";
-import ServicesHome from "../../components/ServicesHome";
-import CaseStudy from "../../components/CaseStudy";
-import Real from "../../components/Real";
-import Footer from "../../components/Footer";
 import AboutUsHome from "../../components/AboutUsHome";
+import Banner from '../../components/Banner';
+import CaseStudy from "../../components/CaseStudy";
+import ChoosingUs from "../../components/ChoosingUs";
+import Footer from "../../components/Footer";
+import FormPermohonanSection from '../../components/FormPermohonanSection';
+import Real from "../../components/Real";
+import ServicesHome from "../../components/ServicesHome";
 import Testimonial from "../../components/Testimonial";
 
 
@@ -15,6 +16,11 @@ const Home = () => {
       {/* Banner Section  */}
       <section>
         <Banner />
+      </section>
+
+      {/* Permohonan Section */}
+      <section>
+        <FormPermohonanSection />
       </section>
 
       {/* About Us Section */}
