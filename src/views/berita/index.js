@@ -6,7 +6,7 @@ const beritaList = [
   {
     id: 1,
     title: 'Peserta Jumbara PMR Diharapkan Terapkan Nilai Positif',
-    date: '02 Juli 2025 10:24',
+    date: '1 Juli 2025',
     author: 'Dinas Kesehatan Kab. Semarang',
     summary: 'Kepala Dinas Kesehatan Kab. Semarang berharap peserta Jumbara PMR dapat menerapkan nilai positif di masyarakat.',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
