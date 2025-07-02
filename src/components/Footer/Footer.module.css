@@ -1,0 +1,184 @@
+.footer {
+    background-color: #0A1931;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Ukuran font dasar diperkecil */
+}
+
+/* Bagian 1: Logo Strip */
+.logoStrip {
+    padding: 15px 0; /* Padding diperkecil */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.logoScroll {
+    display: flex;
+    justify-content: center; /* Logo ditengahkan di layar besar */
+    align-items: center;
+    gap: 40px; /* Jarak antar logo */
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.logoScroll::-webkit-scrollbar {
+    display: none;
+}
+.logoImage {
+    height: 40px; /* Tinggi logo diperkecil */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.logoImage:hover {
+    opacity: 1;
+}
+
+/* Bagian 2: Konten Utama */
+.mainContent > .row > [class="col-"] {
+text-align: center;
+}
+
+.footerHeading {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase; /* Dibuat kapital agar tegas dan rapi */
+    letter-spacing: 1px;
+    /* Menghapus border-bottom agar lebih bersih */
+}
+
+/* GANTI ATAU TAMBAHKAN KEMBALI BLOK DI BAWAH INI */
+
+/* Style untuk list media sosial */
+.FollowList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.socialFollowItem {
+    margin-bottom: 12px;
+}
+
+/* Style untuk link di dalam setiap item */
+.socialFollowItem a {
+    display: flex;
+    align-items: center;
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 300;
+    font-size: 15px;
+    /* Tambahkan baris ini */
+    text-align: left;
+}
+
+/* Efek saat kursor mouse diarahkan ke link */
+.socialFollowItem a:hover {
+    color: #ffc107; /* Warna teks dan ikon akan berubah menjadi kuning */
+}
+
+/* Style khusus untuk ikon di dalam link */
+.socialFollowItem a svg {
+    font-size: 20px;
+    margin-right: 12px;
+    color: #FFFFFF; /* Ikon dibuat sedikit lebih terang dari teks */
+    transition: color 0.3s ease;
+}
+
+/* Efek saat kursor mouse diarahkan ke link, ikon juga ikut berubah warna */
+.socialFollowItem a:hover svg {
+    color: #ffc107;
+}
+
+/* Kolom Tengah: Kontak Kami */
+.contactInfo p {
+    line-height: 1.7; /* Jarak antar baris diperkecil */
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #cccccc;
+}
+.contactInfo p strong {
+    font-weight: 500;
+    masocialrgin-right: 8px; /* Jarak antara label (e.g. Alamat:) dan isinya */
+    color: #FFFFFF;
+    /* Menghapus display:block agar label dan isi menyatu di satu baris */
+}
+
+/* Kolom Kanan: Statistik Pengunjung */
+.visitorStats {
+    display: flex;
+    flex-direction: column;
+}
+.statItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Padding diperkecil */
+    border-bottom: 1px solid rgba(44, 62, 80, 0.5);
+    font-size: 15px;
+}
+.statItem:last-child {
+    border-bottom: none;
+}
+.statItem span {
+    color: #cccccc;
+    font-weight: 300;
+}
+.statItem strong {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* Bagian 3: Sub-Footer */
+.subFooter {
+    background-color: #061224;
+    padding: 15px 0;
+}
+.copyrightText {
+    text-align: center;
+    font-size: 13px;
+    color: #a0a0a0;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Aturan untuk Responsif */
+@media (max-width: 991.98px) {
+    .logoScroll {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mainContent {
+        text-align: center; /* Teks dibuat ke tengah di layar HP */
+    }
+    .socialFollowItem, .visitorStats, .statItem, .contactInfo p {
+        justify-content: center; /* Item juga ikut ke tengah */
+    }
+    .statItem {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mainContent > .row > [class*="col-"] {
+    text-align: center;
+}
+    /* Pastikan .socialIconLinks sudah dihapus dari sini */
+    .visitorStats, .statItem, .contactInfo p {
+        justify-content: center;
+    }
+    
+    .socialFollowList {
+list-style: none; /* Menghilangkan bullet points /
+padding: 0;
+margin: 0;
+display: inline-block; / Membuatnya menjadi blok inline /
+text-align: left; / Isi di dalam list tetap rata kiri */
+}
+    .statItem {
+        gap: 20px;
+    }
+}
+
