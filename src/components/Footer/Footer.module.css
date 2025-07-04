@@ -1,3 +1,38 @@
+/* Flex row for 3 columns footer */
+.footerRowColumns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 32px 0;
+}
+.footerCol {
+  flex: 1 1 0;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  .footerRowColumns {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    padding: 24px 0;
+  }
+  .footerCol {
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+  }
+}
 .footer {
     background-color: #0A1931;
     color: #FFFFFF;
@@ -33,18 +68,38 @@
     opacity: 1;
 }
 
+@media (max-width: 767.98px) {
+  .logoScroll {
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  .logoImage {
+    height: 28px;
+    min-width: 60px;
+    max-width: 90px;
+  }
+}
+
 /* Bagian 2: Konten Utama */
 .mainContent > .row > [class="col-"] {
 text-align: center;
 }
 
 .footerHeading {
-    font-size: 18px;
-    margin-bottom: 24px;
-    letter-spacing: 1.5px;
-    font-weight: 500;
-    color: #FFFFFF;
-    text-transform: uppercase; /* Dibuat kapital agar tegas dan rapi */
+  font-size: 18px;
+  margin-bottom: 24px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* GANTI ATAU TAMBAHKAN KEMBALI BLOK DI BAWAH INI */
@@ -145,6 +200,37 @@ text-align: center;
     color: #FFFFFF;
 }
 
+/* Statistik pengunjung versi simple */
+.visitorStatsSimple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.statSimpleItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #fff;
+  justify-content: center;
+}
+.statSimpleItem span {
+  display: block;
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.statSimpleItem strong {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 0;
+}
+
 /* Bagian 3: Sub-Footer */
 .subFooter {
     margin-top: 24px;
@@ -158,6 +244,29 @@ text-align: center;
     color: #a0a0a0;
     margin: 0;
     font-weight: 300;
+}
+
+/* Statistik pengunjung agar lebih kecil dan sejajar heading */
+.visitorStatsCardsVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 8px;
+  width: auto;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.statCardVertical {
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  padding: 10px 18px 8px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  box-sizing: border-box;
 }
 
 /* Aturan untuk Responsif */
@@ -182,39 +291,62 @@ text-align: center;
 }
 
 @media (max-width: 767.98px) {
-    .mainContent {
-        text-align: center; /* Teks dibuat ke tengah di layar HP */
+    .footerRowColumns {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        padding: 16px 0 32px 0;
     }
-    .socialFollowItem, .visitorStats, .statItem, .contactInfo p {
-        justify-content: center; /* Item juga ikut ke tengah */
-    }
-    .statItem {
-        gap: 20px;
-    }
-    .mainContent .row > div {
+    .footerCol {
+        align-items: center;
+        text-align: center;
+        min-width: 0;
         width: 100%;
-        float: none;
+        max-width: 100%;
+        margin-bottom: 0;
     }
-}
-
-@media (max-width: 767.98px) {
-    .mainContent > .row > [class*="col-"] {
-    text-align: center;
-}
-    /* Pastikan .socialIconLinks sudah dihapus dari sini */
-    .visitorStats, .statItem, .contactInfo p {
-        justify-content: center;
+    .contactInfoElegant {
+        align-items: center;
+        max-width: 100%;
+        gap: 14px;
     }
-    
-    .socialFollowList {
-list-style: none; /* Menghilangkan bullet points /
-padding: 0;
-margin: 0;
-display: inline-block; / Membuatnya menjadi blok inline /
-text-align: left; / Isi di dalam list tetap rata kiri */
-}
-    .statItem {
-        gap: 20px;
+    .contactItemElegant {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .contactItemElegant .contactIcon {
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+    .contactItemElegant .contactLabel {
+        font-size: 13px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+    .contactItemElegant .contactValue {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .visitorStatsSimple {
+        gap: 10px;
+        margin-top: 8px;
+    }
+    .statSimpleItem {
+        gap: 8px;
+        font-size: 13px;
+    }
+    .statSimpleItem span {
+        font-size: 12px;
+    }
+    .statSimpleItem strong {
+        font-size: 15px;
+    }
+    .statIcon {
+        font-size: 16px !important;
     }
 }
 
@@ -327,19 +459,22 @@ text-align: left; / Isi di dalam list tetap rata kiri */
 .visitorStatsCardsVertical {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  align-items: flex-start;
+  gap: 10px;
+  align-items: center;
   margin-top: 8px;
-  width: 100%;
+  width: auto;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .statCardVertical {
   background: rgba(255,255,255,0.03);
   border-radius: 8px;
-  padding: 12px 18px 10px 18px;
+  padding: 10px 18px 8px 18px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  align-items: center;
+  width: 180px;
   box-sizing: border-box;
 }
 .statCardVertical .statIcon {
@@ -384,6 +519,269 @@ text-align: left; / Isi di dalam list tetap rata kiri */
 }
 .mainContent .row > div:nth-child(2) .footerHeading {
   text-align: center;
+}
+
+/* Style untuk kontak yang lebih rapi */
+.contactInfoCentered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 8px;
+}
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  max-width: 260px;
+}
+.contactItemCentered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.contactIcon {
+  font-size: 22px;
+  color: #ffc107;
+  margin-bottom: 2px;
+}
+.contactLabel {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+.contactValue {
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 400;
+  line-height: 1.5;
+  word-break: break-word;
+}
+@media (max-width: 991.98px) {
+  .contactInfoCentered {
+    align-items: center;
+  }
+  .contactItemCentered {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Elegant Contact Info Style */
+.contactInfoElegant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 8px;
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contactItemElegant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+  width: 100%;
+}
+.contactItemElegant .contactIcon {
+  font-size: 22px;
+  color: #ffc107;
+  margin-bottom: 2px;
+}
+.contactItemElegant .contactLabel {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+.contactItemElegant .contactValue {
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 400;
+  line-height: 1.5;
+  word-break: break-word;
+}
+@media (max-width: 767.98px) {
+  .contactInfoElegant {
+    align-items: center;
+    max-width: 100%;
+    gap: 14px;
+  }
+  .contactItemElegant {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .contactItemElegant .contactIcon {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+  .contactItemElegant .contactLabel {
+    font-size: 13px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+  .contactItemElegant .contactValue {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+@media (min-width: 768px) {
+  .contactInfoElegant {
+    align-items: flex-start;
+    max-width: 250px;
+    gap: 12px;
+  }
+  .contactItemElegant {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .contactItemElegant .contactIcon {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .contactItemElegant .contactLabel {
+    font-size: 13px;
+    margin-bottom: 1px;
+    margin-top: 0;
+  }
+  .contactItemElegant .contactValue {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+/* Mobile-friendly contact info */
+.contactInfoMobileCentered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 8px;
+  width: 100%;
+}
+.contactItemMobileCentered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+  max-width: 320px;
+}
+.contactIconMobile {
+  font-size: 22px;
+  color: #ffc107;
+  margin-bottom: 2px;
+}
+.contactLabelMobile {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+.contactValueMobile {
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 400;
+  line-height: 1.5;
+  word-break: break-word;
+}
+@media (max-width: 991.98px) {
+  .footerHeading {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contactInfoMobileCentered {
+    align-items: center;
+    max-width: 100%;
+  }
+  .contactItemMobileCentered {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .footerCol ul {
+    width: 100%;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .footerCol li {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin-bottom: 12px;
+  }
+  .footerCol a, .footerCol span {
+    font-size: 15px;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .socialFollowList {
+    width: 100%;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .socialFollowItem {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  .socialFollowItem a, .socialFollowItem span {
+    font-size: 15px;
+    word-break: break-word;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 

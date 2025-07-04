@@ -1,4 +1,3 @@
-
 import AboutUs from '../views/aboutUs';
 import Berita from '../views/berita';
 import ContactUs from '../views/contactUs';
