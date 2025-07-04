@@ -61,7 +61,11 @@ const NavbarMain = () => {
             />
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-toggler">
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <path stroke="white" strokeWidth="2" strokeLinecap="round" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
             <Nav>
               <NavLink
@@ -101,7 +105,6 @@ const NavbarMain = () => {
                 <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/hello" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>Cloud and IoT Based Solutions</NavLink></NavDropdown.Item>
                 <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/hello" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>IT Consultancy</NavLink></NavDropdown.Item>
                 <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/hello" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>AI Solutions</NavLink></NavDropdown.Item>
-
               </NavDropdown>
 
               
