@@ -1,7 +1,7 @@
 const navUrls = [
   {
     url: "/",
-    text: "Home",
+    text: "Beranda",
   },
   {
     url: "/about",
